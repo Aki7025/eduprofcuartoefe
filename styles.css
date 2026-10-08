@@ -1,0 +1,56 @@
+header{
+    background: #00c3ff;
+    color: #000000;
+    position: sticky;
+    top:0;
+    z-index: 50;
+    border-bottom: 4px solid #000000
+}
+a{ 
+    color: inherit; 
+}
+body{
+  margin:0;
+  font-family: "Inter", "Work Sans", system-ui, -apple-system, sans-serif;
+  background: #F3F8F0;
+}
+img{ 
+    max-width:100%; display:block; 
+}
+h1,h2,h3{
+  font-family: "Alfa Slab One", Impact, sans-serif;
+  letter-spacing: .5px;
+  line-height: 1.05;
+  margin: 0 0 .4em;
+}
+nav{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .75rem;
+  padding: .9rem 1.5rem;
+  max-width: 1120px;
+  margin:0 auto;
+}
+.nav-menu{
+  list-style:none;
+  display:flex;
+  gap: 1.4rem;
+  margin:0; padding:0;
+  flex-wrap: wrap;
+}
+.nav-menu a{
+  text-decoration:none;
+  color: #F3F8F0;
+  font-size: .92rem;
+  font-weight:600;
+  letter-spacing:.3px;
+  padding: .3rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color .2s ease, color .2s ease;
+}
+.nav-menu a:hover, .nav-menu a[aria-current="page"]{
+  border-color: #4b0ce0;
+  color: #4b0ce0;
+}
