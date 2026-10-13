@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,55 +11,60 @@
 </head>
 
 <body>
-    <header>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="index.html"aria-current="page">Inicio</a></li>
+    <header class="site-header">
+        <nav class="nav-wrap">
+            <ul class="nav-menu">
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
+
+    <main class="container">
+        <section class="hero">
             <h1>Bienvenido a Vitalfit</h1>
             <p>Tu tienda de productos saludables y fitness.</p>
-            <div>
+        </section>
+
+        <section class="content-cards">
+            <div class="card-info oferta">
                 <p>
-                    ¡OFERTA! Compra ahora y obtén un 10% de descuento en tu primera compra. Usa el código: VITAL20 al
-                    finalizar tu compra.
-                    <a href="productos.html">Obten tu descuento Aquí</a>
+                    ¡OFERTA! Compra ahora y obtén un 10% de descuento en tu primera compra. Usa el código: <strong>VITAL20</strong> al finalizar tu compra.
                 </p>
+                <a href="productos.html" class="btn-action">Obtén tu descuento Aquí</a>
             </div>
-            <div>
+
+            <div class="card-info">
+                <h2>¿Por qué elegirnos?</h2>
                 <p>
-                    ¿Por qué elegirnos? En Vitalfit Ofrecemos implementos que están enfocados en brindar comodidad,
-                    reducir el riesgo de
-                    lesiones y facilitar rutinas adaptadas para principiantes, con un entrenamiento más suave o los que
-                    no cuentan
-                    con mucho espacio disponible para guardar estos materiales.
-                </p>
-            </div>
-            <div>
-                <p>
-                    Por la compra de alguno de nuestros productos (Cuerdas, ligas, colchonetas, pelotas, etc.) te
-                    brindamos una breve
-                    capacitación en la cual te entregamos orientamos sobre el uso de estos y para que sirven, además te
-                    recomendaremos
-                    ejercicios blandos por los cuales puedes empezar.
+                    En Vitalfit ofrecemos implementos enfocados en brindar comodidad, reducir el riesgo de lesiones y facilitar rutinas adaptadas para principiantes con un entrenamiento más suave, o para quienes no cuentan con mucho espacio disponible para guardar materiales.
                 </p>
             </div>
 
-            <div>
-                <p>Tienes dudas?</p> <a href="contacto.html">Contactanos</a>
+            <div class="card-info">
+                <h2>Capacitación gratuita</h2>
+                <p>
+                    Por la compra de cualquiera de nuestros productos (cuerdas, ligas, colchonetas, pelotas, etc.) te brindamos una breve orientación sobre su uso correcto y beneficios, además de recomendarte ejercicios suaves para empezar.
+                </p>
+            </div>
+
+            <div class="card-info">
+                <h2>¿Tienes dudas?</h2>
+                <p>Comunícate con nosotros para resolver cualquier consulta.</p>
+                <a href="contacto.html" class="btn-action">Contáctanos</a>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>© 2026 Vitalfit - Desarrollado por José Coronado</p>
-        <p><a href="contacto.html">Contáctanos</a> · <a href="productos.html">Nuestros productos</a></p>
+        <div class="container">
+            <p>© 2026 Vitalfit - Desarrollado por José Coronado</p>
+            <p><a href="contacto.html">Contáctanos</a> · <a href="productos.html">Nuestros productos</a></p>
+        </div>
     </footer>
+
     <script src="JS/script.js"></script>
     <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2026/10/13/17/20261013174506-5YK08IBD.js" defer></script>
