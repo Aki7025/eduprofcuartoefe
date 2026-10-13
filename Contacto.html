@@ -1,26 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitalfit | Contacto</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Contacto</h1>
-            <p>¿Tienes alguna pregunta? ¡Estamos aquí para ayudarte!</p>
-        </section>
-    </main>
-</body>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contacto | Vitalfit</title>
+        <meta name="author" content="José Coronado">
+        <meta name="description" content="Contáctanos en Vitalfit. Encuentra nuestros implementos fitness y comunícate con nosotros para cualquier duda o pedido.">
+        <link rel="stylesheet" href="CSS/styles.css" />
+    </head>
+    <body>
+        <header class="site-header">
+            <nav class="nav-wrap">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="statusBar" class="alert">
+            <span id="statusBarText"></span>
+            <button type="button" id="statusBarClose" class="status-bar-close" aria-label="Cerrar aviso">&times;</button>
+        </div>
+
+        <main>
+            <section class="hero" style="padding-bottom:1rem;">
+                <div class="container">
+                    <span class="eyebrow">Contacto</span>
+                    <h1>Estamos aquí para ayudarte</h1>
+                </div>
+            </section>
+
+            <section style="padding-top:0;">
+                <div class="container">
+                    <div id="contactoPublico" class="contacto-grid">
+                        <div>
+                            <h2>Cómo encontrarnos</h2>
+                            <div>
+                                <ul class="contact-info-list">
+                                    <li><span><b>Dirección</b>Liceo comercial B-72 Estación Central Av. 5 de Abril</span></li>
+                                    <li><span><b>Teléfono</b>+56 9 6765 3953</span></li>
+                                    <li><span><b>Correo</b>contacto@vitalfit.cl</span></li>
+                                    <li><span><b>Ubicación</b><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.438533791262!2d-70.70468702494786!3d-33.46393169820163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c36243f99037%3A0xc4b08f2e44a8ca24!2sLiceo%20Comercial%20B%2072%20de%20Estaci%C3%B3n%20Central!5e0!3m2!1ses-419!2scl!4v1788804548475!5m2!1ses-419!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2>Escríbenos</h2>
+                            <form id="contactForm" novalidate>
+                                <div class="form-field">
+                                    <label for="cNombre">Nombre completo</label>
+                                    <input type="text" id="cNombre" name="cNombre" placeholder="Tu nombre" />
+                                    <p class="field-error" id="errNombre"></p>
+                                </div>
+                                <div class="form-field">
+                                    <label for="cCorreo">Correo electrónico</label>
+                                    <input type="text" id="cCorreo" name="cCorreo" placeholder="tucorreo@ejemplo.com" />
+                                    <p class="field-error" id="errCorreo"></p>
+                                </div>
+                                <div class="form-field">
+                                    <label for="cTelefono">Teléfono</label>
+                                    <input type="text" id="cTelefono" name="cTelefono" placeholder="912345678" />
+                                    <p class="field-error" id="errTelefono"></p>
+                                </div>
+                                <div class="form-field">
+                                    <label for="cMensaje">Mensaje</label>
+                                    <textarea id="cMensaje" name="cMensaje" rows="4" placeholder="Cuéntanos qué implementos o asesoría necesitas"></textarea>
+                                    <p class="field-error" id="errMensaje"></p>
+                                </div>
+                                <button type="submit" class="cta">Enviar mensaje</button>
+                                <div id="contactoAviso" class="alert"></div>
+                            </form>
+
+                            <hr style="border:none;border-top:1px solid #ffdcb4;margin:2.2rem 0;" />
+
+                            <h2 style="font-size:1.3rem;">Acceso Administrador</h2>
+                            <form id="loginForm" novalidate>
+                                <div class="form-field">
+                                    <label for="lUsuario">Usuario</label>
+                                    <input type="text" id="lUsuario" name="lUsuario" placeholder="admin" />
+                                </div>
+                                <div class="form-field">
+                                    <label for="lClave">Clave</label>
+                                    <input type="password" id="lClave" name="lClave" placeholder="••••" />
+                                </div>
+                                <p class="field-error" id="errLogin"></p>
+                                <button type="submit" class="cta secundario">Iniciar sesión</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="adminPanel" class="card hidden" style="margin-top:2rem;">
+                        <h2>Panel de Administración</h2>
+                        <p>Pedidos de productos registrados en localStorage:</p>
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Fecha</th><th>Productos / Kit</th><th>Total</th></tr>
+                            </thead>
+                            <tbody id="adminTablaBody"></tbody>
+                        </table>
+                        <button type="button" id="btnLogout" class="cta small secundario">Cerrar sesión</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>© 2026 Vitalfit — Tu tienda fitness · Desarrollado por José Coronado</p>
+                <p><a href="index.html">Volver al Inicio</a> · <a href="productos.html">Nuestros productos</a></p>
+            </div>
+        </footer>
+
+        <script src="JS/script.js"></script>
+    </body>
 </html>
