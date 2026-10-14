@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Times New Roman', Times, serif;
     background-color: #fff9f5;
     color: #2d241e;
     line-height: 1.6;
@@ -81,7 +81,7 @@ h1 {
     color: #d97736;
 }
 h2 {
-    color: #d97736;
+    color: #000000;
     font-size: 1.6rem;
     margin-bottom: 1rem;
 }
