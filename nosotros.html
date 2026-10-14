@@ -1,27 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <title>Vitalfit | Nosotros</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Nosotros</h1>
-            <p>Conoce más sobre nuestra historia y compromiso con la salud y el bienestar.</p>
-        </section>
-    </main>
-</body>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="José Coronado">
+        <meta name="description" content="Vitalfit es una tienda de productos fitness, ofreciendo implementos que brindan comodidad, reducen el riesgo de lesiones y facilitan rutinas adaptadas para principiantes.">
+        <link rel="stylesheet" href="CSS/styles.css">
+        <title>Vitalfit | Nosotros</title>
+        <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+        <script src="https://files.bpcontent.cloud/2026/10/13/17/20261013174506-5YK08IBD.js" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <nav class="nav-wrap">
+                <ul class="nav-menu">
+                    <li><a href="index.html" >Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="statusBar" class="alert">
+            <span id="statusBarText"></span>
+            <button type="button" id="statusBarClose" class="status-bar-close" aria-label="Cerrar aviso">&times;</button>
+        </div>
+        <main>
+            <section class="hero" style="padding-bottom:1rem;">
+                <div class="container">
+                    <span class="eyebrow">Quiénes somos</span>
+                    <h1>Los trabajadores de nuestro emprendimiento</h1>
+                    <p>
+                        Un equipo pequeño, rápido y con oficio: así atendemos sin perder calidad ni tiempos de espera.
+                    </p>
+                    <a href="productos.html" class="cta">Ver que productos ofrecemos</a>
+                </div>
+            </section>
+ 
+            <section>
+                <div class="container">
+                    <div id="teamGrid" class="grid cols-3" aria-live="polite"></div>
+                </div>
+            </section>
+        </main>
+ 
+        <footer>
+            <div class="container">
+                <p>© 2026 Gastroferia — Comida al Paso · SaaS desarrollado por José Coronado</p>
+                <p><a href="contacto.html">Contáctanos</a> · <a href="finanzas.html">Ver planes de Google Ads</a></p>
+            </div>
+        </footer>
+ 
+        <script src="JS/script.js"></script>
+    </body>
 </html>
