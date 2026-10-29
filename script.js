@@ -48,9 +48,27 @@ function initStatusBar() {
 }
 
 const equipofit = [
-  { name: "José Coronado", role: "CEO", specialty: "Creador y dueño del emprendimiento" },
-  { name: "Karlibeth Moran", role: "Project Manager", specialty: "Líder en proyectos de la empresa" },
-  { name: "Ashley Ossa", role: "Subdirector de operaciones", specialty: "Encargada de las operaciones del negocio" },
+  { 
+    name: "José Coronado", 
+    role: "CEO", 
+    specialty: "Creador y dueño del emprendimiento",
+    image: "IMG/jose.jpeg" 
+  },
+
+  { 
+    name: "Karlibeth Moran",
+    role: "Project Manager", 
+    specialty: "Líder en proyectos de la empresa",
+    image: "IMG/karlibeth.png"
+  },
+  
+  { 
+    name: "Ashley Ossa",
+    role: "Subdirector de operaciones",
+    specialty: "Encargada de las operaciones del negocio",
+    image: "IMG/ashley.jpeg"
+  }
+  
 ];
 
 function initTeamSection() {
@@ -64,9 +82,16 @@ function initTeamSection() {
 
     const card = document.createElement("div");
     card.className = "card member-card";
+
+    // Si tiene imagen, la inserta debajo del nombre
+    const imgHtml = member.image 
+      ? `<img src="${member.image}" alt="${member.name}" class="member-photo">` 
+      : "";
+
     card.innerHTML = `
-      <span class="cargo">${member.role}</span>
       <h3>${member.name}</h3>
+      ${imgHtml}
+      <span class="cargo">${member.role}</span>
       <p>${member.specialty}</p>
     `;
 
@@ -89,7 +114,6 @@ function initServicesSection() {
   const container = document.getElementById("comboGrid");
   if (!container) return;
 
-  
   const stock = readFromStorage("stock", { 
     banda: 25, 
     mano: 25, 
