@@ -68,7 +68,7 @@ const equipofit = [
     specialty: "Encargada de las operaciones del negocio",
     image: "IMG/ashley.jpeg"
   }
-  
+
 ];
 
 function initTeamSection() {
@@ -100,7 +100,15 @@ function initTeamSection() {
 }
 
 const menuCombos = [
-  { id: "banda", name: "Banda elástica", price: 2000, color: "#ff6b6b" },
+  { 
+    id: "banda",
+    name: "Banda elástica",
+    price: 2000,
+    color: "#ff6b6b",
+    image: "IMG/Bandas de estiramiento.jpg"
+
+  }
+
   { id: "mano", name: "Ejercitador de mano", price: 3990, color: "#4dabf7" },
   { id: "mat", name: "Colchoneta MAT", price: 11900, color: "#80df8f" },
   { id: "cuerda", name: "Cuerda para saltar", price: 4990, color: "#c4aeff" },
