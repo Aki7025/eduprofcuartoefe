@@ -68,7 +68,6 @@ const equipofit = [
     specialty: "Encargada de las operaciones del negocio",
     image: "IMG/ashley.jpeg"
   }
-
 ];
 
 function initTeamSection() {
@@ -82,8 +81,7 @@ function initTeamSection() {
 
     const card = document.createElement("div");
     card.className = "card member-card";
-
-    // Si tiene imagen, la inserta debajo del nombre
+    
     const imgHtml = member.image 
       ? `<img src="${member.image}" alt="${member.name}" class="member-photo">` 
       : "";
@@ -105,15 +103,48 @@ const menuCombos = [
     name: "Banda elástica",
     price: 2000,
     color: "#ff6b6b",
-    image: "IMG/Bandas de estiramiento.jpg"
+    image: "IMG/Bandas-de-estiramiento.jpg"
+  },
 
+  {
+    id: "mano",
+    name: "Ejercitador de mano", 
+    price: 3990, 
+    color: "#4dabf7",
+    image: "IMG/ejercitador-de-mano.jpg"
+  },
+
+  { 
+    id: "mat", 
+    name: "Colchoneta MAT", 
+    price: 11900, 
+    color: "#80df8f",
+    image: "IMG/colchoneta-mat.jpg"
+  },
+
+  { 
+    id: "cuerda", 
+    name: "Cuerda para saltar", 
+    price: 4990, 
+    color: "#c4aeff",
+    image: "IMG/cuerda-para-saltar.jpg"
+  },
+
+  { 
+    id: "pelota", 
+    name: "Pelota pequeña", 
+    price: 5290, 
+    color: "#fbff0c",
+    image: "IMG/pelota-ejercicio.jpg"
+  },
+
+  { 
+    id: "correa", 
+    name: "Correa elastica", 
+    price: 2100, 
+    color: "#ffd9f5",
+    image: "IMG/correa-de-estiramiento.jpg"
   }
-
-  { id: "mano", name: "Ejercitador de mano", price: 3990, color: "#4dabf7" },
-  { id: "mat", name: "Colchoneta MAT", price: 11900, color: "#80df8f" },
-  { id: "cuerda", name: "Cuerda para saltar", price: 4990, color: "#c4aeff" },
-  { id: "pelota", name: "Pelota pequeña", price: 5290, color: "#f8fa9f" },
-  { id: "correa", name: "Correa elastica", price: 2100, color: "#ffd9ff" },
 ];
 
 let cart = [];
@@ -145,8 +176,14 @@ function createComboCard(combo, stock, container) {
   card.className = "card combo-card";
   card.style.borderTop = `6px solid ${combo.color}`;
 
+  // Se añade la imagen del combo si existe
+  const imgHtml = combo.image 
+    ? `<img src="${combo.image}" alt="${combo.name}" class="combo-photo">` 
+    : "";
+
   card.innerHTML = `
     <h3>${combo.name}</h3>
+    ${imgHtml}
     <div class="combo-precio" style="color:${combo.color}">${formatPrice(combo.price)}</div>
     <p class="combo-stock">Stock disponible: <span class="numero-stock">${stock[combo.id]}</span></p>
     <div class="combo-qty-row">
